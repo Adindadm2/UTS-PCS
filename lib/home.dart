@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pariwisata/Kuliner/kuliner.dart';
+import 'package:pariwisata/Penginapan/penginapan.dart';
+import 'package:pariwisata/Pusat_Belanja/belanja.dart';
 import 'package:pariwisata/Wisata/Wisata.dart';
 import 'package:pariwisata/splashscreen.dart';
 import 'package:pariwisata/header_drawer.dart';
@@ -126,7 +128,12 @@ class _HomePageState extends State<HomePage> {
               Card(
                 margin: const EdgeInsets.all(8),
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Penginapan()));
+                  },
                   splashColor: Colors.red,
                   child: Center(
                     child: Column(
@@ -149,7 +156,12 @@ class _HomePageState extends State<HomePage> {
               Card(
                   margin: const EdgeInsets.all(8),
                   child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Belanja()));
+                      },
                       splashColor: Colors.red,
                       child: Center(
                           child:
